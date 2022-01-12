@@ -19,8 +19,9 @@ void binary() {
 }
 
 int main() {
-  cout << "Hexadecimal or Binary?: (H/B)";
-  cin >> BH;
+  select:
+    cout << "Hexadecimal or Binary?: (H/B)";
+    cin >> BH;
   if (BH=="B") {
     binary();
   }
@@ -28,7 +29,8 @@ int main() {
     hex();
   }
   else {
-    cout << "Please enter a valid input";
+    cout << "Please enter a valid input\n";
+    goto select;
   }
   return 0;
   }
